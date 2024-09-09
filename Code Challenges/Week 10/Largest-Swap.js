@@ -14,4 +14,48 @@ Example 2:
 Input : 432
 Output : 432
 Explanation:Here, no swap is required. The given number is already the largest.
+
+Pseudocode steps: 
+- Convert the integer to a string to easily manipulate individual digits.
+- Iterate through the string from left to right.
+- For each digit, compare it with all digits to its right.
+- Find the largest digit to the right that is larger than the current digit.
+- If found, swap these two digits and return the resulting number.
+- If no such swap is found after checking all digits, return the original number.
+
 */
+
+function largestSwap(num) {
+    // Convert the number to a string
+    const str = num.toString();
+    
+    // Initialize variables to store the swap positions
+    let swapFrom = -1;
+    let swapTo = -1;
+    
+    // Iterate through the string from left to right
+    for (let i = 0; i < str.length - 1; i++) {
+      // Find the maximum digit to the right of the current position
+      const maxRightDigit = Math.max(...str.slice(i + 1));
+      
+      // Check if the current digit is smaller than the maximum right digit
+      if (str[i] < maxRightDigit) {
+        // Find the rightmost occurrence of the maximum digit
+        swapFrom = i;
+        swapTo = str.lastIndexOf(maxRightDigit);
+        
+        // Swap the digits
+        const arr = str.split('');
+        [arr[swapFrom], arr[swapTo]] = [arr[swapTo], arr[swapFrom]];
+        
+        // Join the array back into a string and convert to number
+        return parseInt(arr.join(''));
+      }
+    }
+    
+    // If no swap was needed, return the original number
+    return num;
+  }
+  
+  console.log(largestSwap(2736)); // Output: 7236
+console.log(largestSwap(432));  // Output: 432
