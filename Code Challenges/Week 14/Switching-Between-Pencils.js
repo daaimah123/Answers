@@ -14,4 +14,41 @@ colorPatternTimes(["Red", "Yellow", "Green", "Blue"]) ➞ 11
 
 colorPatternTimes(["Blue", "Blue", "Blue", "Red", "Red", "Red"]) ➞ 13 
 
+
+Pseudocode Steps: 
+- Each square takes 2 seconds to color.
+- Switching colors takes 1 second.
+- We only switch colors if the current color is different from the previous one.
+- We need to count the number of squares colored.
+- We need to count the number of times we switch colors.
+- We need to calculate the total time based on these counts.
+
+
 */
+
+function colorPatternTimes(cols) {
+    // input array might be empty or contain non-string elements
+    if (!Array.isArray(cols) || cols.length === 0) return 0;
+    let totalTime = 0;
+    let prevColor = cols[0];
+    let colorSwitchCount = 0;
+  
+    for (let i = 1; i < cols.length; i++) {
+      if (cols[i] !== prevColor) {
+        totalTime += 2; // Color the square
+        colorSwitchCount++;
+        totalTime += 1; // Switch colors
+        prevColor = cols[i];
+      } else {
+        totalTime += 2; // Just color the square
+      }
+    }
+  
+    return totalTime;
+  }
+
+  console.log(colorPatternTimes(["Red", "Blue", "Red", "Blue", "Red"])); // Output: 14
+  console.log(colorPatternTimes(["Blue"])); // Output: 2
+  console.log(colorPatternTimes(["Red", "Yellow", "Green", "Blue"])); // Output: 11
+  console.log(colorPatternTimes(["Blue", "Blue", "Blue", "Red", "Red", "Red"])); // Output: 13
+  

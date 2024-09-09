@@ -5,4 +5,33 @@ Example 1			  Example 2			    Example 3
 Input: '! !'          Input:'123456789'	    Input: 'This looks5 grea8t!'
 Output: '! !'		  Output: ''			Output: 'This looks great!'	
 
+Pseudocode Steps: 
+- We need to create a function that takes a string as input.
+- We should use a regular expression to match and remove all numeric characters.
+- We need to preserve the original formatting, including spacing and special characters.
+- The function should return the cleaned string.
+
+
 */
+
+function removeNumbers(inputString) {
+    // Remove all numeric characters
+    return inputString.replace(/[0-9]/g, '');
+
+    /*
+    // remove decimals
+    return inputString.replace(/[0-9.]/g, '');
+    // numbers at beginning of word
+    return inputString.replace(/^\d+/g, '');
+    // numbers at end of word
+    return inputString.replace(/(\d+)$/, '');
+    // non-breaking spaces
+    return inputString.replace(/[0-9]|&#160;/g, '');
+     */
+    
+  }
+  
+  console.log(removeNumbers("! !")); // Output: "! !"
+  console.log(removeNumbers("123456789")); // Output: ""
+  console.log(removeNumbers("This looks5 grea8t!")); // Output: "This looks great!"
+  
