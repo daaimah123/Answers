@@ -1,0 +1,10 @@
+/* Basic form styling */
+form {
+  width:  300px;
+  margin:  0 auto;
+}
+
+/* Error state styling */
+.error {
+  color: red;
+}
