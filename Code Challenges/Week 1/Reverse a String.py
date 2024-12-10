@@ -42,3 +42,25 @@ def reverse_string(input_string):
 print(reverse_string("hello"))  # Should print: olleh
 print(reverse_string("Howdy"))  # Should print: ydwoh
 print(reverse_string("Greetings from Earth"))  # Should print: htrae mrof sgniteerG
+
+# Method 2: Using the built-in reversed() function with join()
+# def reverse_string(input_string):
+#     return ''.join(reversed(input_string))
+
+# Method 3: Using a loop
+# def reverse_string(input_string):
+    # reversed = ""
+    # for char in input_string:
+    #     reversed = char + reversed
+    # return reversed
+
+# Method 4: Using list comprehension 
+# def reverse_string(input_string):
+#     return ''.join([input_string[i] for i in range(len(input_string)-1, -1, -1)])
+
+# Method 5: Using the reverse() method
+# def reverse_string(input_string):
+#     return input_string.reverse()
+
+
+# run python3 Reverse\ a\ String.py 
