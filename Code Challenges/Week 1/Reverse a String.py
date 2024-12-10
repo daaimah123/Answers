@@ -6,6 +6,7 @@
     # reverseString("Howdy") should return the string ydwoH.
     # reverseString("Greetings from Earth") should return the string htraE morf sgniteerG.
 
+# Method 1: Use slice notation
 # 1. Analyze the requirements:
     # Create a function that takes a string as input
     # Reverse the input string
