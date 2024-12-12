@@ -84,7 +84,42 @@
 
 
 
+
+
 # USING ABSTRACT BASE CASES
+
+# Abstract Base Classes in Python are important for:
+
+# Defining interfaces
+# Enforcing contracts on subclasses
+# Providing a way to customize behavior of isinstance() and issubclass()
+
+# Example usage:
+
+    # from abc import ABC, abstractmethod
+
+    # class Animal(ABC):
+    #     @abstractmethod
+    #     def make_sound(self):
+    #         pass
+
+    # class Dog(Animal):
+    #     def make_sound(self):
+    #         return "Woof!"
+
+    # # Usage
+    # dog = Dog()
+    # print(dog.make_sound())  # Output: Woof!
+
+# Comparison to JavaScript: JavaScript doesn't have built-in support for abstract classes, but you can achieve similar functionality using interfaces or abstract functions:
+
+    # abstract class Animal {
+    #   abstract makeSound();
+    # }
+
+    # class Dog extends Animal {
+    #   makeSound() { return "Woof!" }
+    # }
 
 from abc import ABC, abstractmethod
 
@@ -179,7 +214,49 @@ print(formatted_string)
 
 
 
+
+
+
 # USING ENUMS
+
+# Enums in Python allow you to define a set of named constants. They're useful for representing a fixed set of constants.
+
+# Example:
+
+    # from enum import Enum
+
+    # class Color(Enum):
+    #     RED = 1
+    #     GREEN = 2
+    #     BLUE = 3
+
+    # print(Color.RED)  # Color.red
+    # print(Color.RED.value)  # 1
+
+# Importance:
+    # Type safety for fixed sets of constants
+    # Improved code readability
+    # Avoiding magic numbers
+
+# Comparison to JavaScript: JavaScript has enums through TypeScript, but native JavaScript doesn't have built-in support:
+
+    # enum Color {
+    #   Red = 1,
+    #   Green = 2,
+    #   Blue = 3
+    # }
+
+    # console.log(Color.Red); // 1
+
+# Native JavaScript equivalent:
+
+    # const Color = Object.freeze({
+    #   RED: 1,
+    #   GREEN: 2,
+    #   BLUE: 3
+    # });
+
+    # console.log(Color.RED); // 1
 
 from enum import Enum
 
@@ -240,7 +317,45 @@ print(formatted_string)
 
 
 
+
+
+
+
 # USING CLASSES AND OBJECTS
+
+# Classes and objects are fundamental concepts in Python for creating custom types and encapsulating data and behavior.
+
+# Example:
+
+    # class Person:
+    #     def __init__(self, name, age):
+    #         self.name = name
+    #         self.age = age
+        
+    #     def greet(self):
+    #         print(f"Hello, I'm {self.name}, I am {self.age} years old.")
+
+    # person = Person("Alice", 30)
+    # person.greet()  # Output: Hello, I'm Alice, I am 30 years old.
+
+# Importance:
+    # Encapsulation
+    # Code reuse
+    # Organizing related data and methods
+
+# Comparison to JavaScript: JavaScript uses prototypes instead of classes:
+
+    # function Person(name, age) {
+    #   this.name = name;
+    #   this.age = age;
+    # }
+
+    # Person.prototype.greet = function() {
+    #   console.log(`Hello, I'm ${this.name}, I am ${this.age} years old.`);
+    # };
+
+    # const person = new Person("Alice", 30);
+    # person.greet(); // Output: Hello, I'm Alice, I am 30 years old.
 
 # Define classes for different data types
 class Integer:
