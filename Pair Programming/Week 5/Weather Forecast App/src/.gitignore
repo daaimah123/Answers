@@ -1,0 +1,4 @@
+node_modules
+
+# uncomment the line below once you've added your private token to your .env file
+# .env
