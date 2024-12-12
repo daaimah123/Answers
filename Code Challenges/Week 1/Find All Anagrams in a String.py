@@ -21,25 +21,7 @@
     # Slide the window and compare counters
     # Keep track of matching windows
 
-# Counting Characters Approach
-from typing import List 
-from collections import Counter
-
-def find_anagrams(s: str, p: str) -> List[int]:
-    if len(p) > len(s):
-        return []
-    
-    pattern_counter = Counter(p)
-    result = []
-    
-    for i in range(len(s) - len(p) + 1):
-        window_counter = Counter(s[i:i+len(p)])
-        if window_counter == pattern_counter:
-            result.append(i)
-    
-    return result
-
-# Sliding Window Approach
+# Counting Characters with Sliding Window Approach
 from typing import List 
 from collections import Counter
 
