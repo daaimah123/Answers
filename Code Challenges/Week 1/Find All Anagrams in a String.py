@@ -73,3 +73,22 @@ def find_anagrams(s: str, p: str) -> list[int]:
 # Test cases
 print(find_anagrams("cbaebabacd", "abc"))  # Output: [0, 6]
 print(find_anagrams("abab", "ab"))  # Output: [0, 1, 2]
+
+
+#  NOTES
+# (s: str, p: str):
+    # This part defines the types of the function parameters.
+    # s is expected to be a string (str)
+    # p is expected to be a string (str)
+    # The comma separates multiple parameter type annotations.
+
+# -> list[int]:
+    # The arrow (->) indicates that we're specifying the return type.
+    # list[int] means the function returns a list containing integers.
+
+# s[i:i+len(p)] is extracting a substring from index i up to index i+len(p).
+    # s: This is the original string we're working with.
+    # [i:i+len(p)]: This is the slice notation.
+    # i: This is the starting index of the slice. It represents the position in the string where we want to begin our extraction.
+    # len(p): This gives us the length of the pattern string p.
+    # The colon : acts as a separator between the start and end indices.
