@@ -21,20 +21,6 @@
     # Slide the window and compare counters
     # Keep track of matching windows
 
-# Sorting-based Approach
-def find_anagrams(s: str, p: str) -> list[int]:
-    if len(p) > len(s):
-        return []
-    
-    pattern_sorted = sorted(p)
-    result = []
-    
-    for i in range(len(s) - len(p) + 1):
-        if sorted(s[i:i+len(p)]) == pattern_sorted:
-            result.append(i)
-    
-    return result
-
 # Counting Characters Approach
 from collections import Counter
 
