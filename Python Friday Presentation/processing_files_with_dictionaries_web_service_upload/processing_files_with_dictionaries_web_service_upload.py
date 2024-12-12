@@ -83,3 +83,41 @@
     # Basic error handling
 
 # Remember to replace the placeholder web service URL in config.json with your actual API endpoint before running the script. Also, ensure you have the necessary permissions to read the input directory and make outbound network connections when uploading data.
+
+
+# =====================
+# EVALUATION CRITERIA
+# =====================
+
+# I. Environment Setup
+    # Correct installation of Python and necessary libraries (requests)
+    # Proper setup of project directory structure
+
+# II. File Processing
+    # Correct use of os.listdir() to read all .txt files from /data/feedback
+    # Accurate extraction of relevant information (title, name, date, feedback) from each file
+    # Creation of dictionaries with extracted information as key-value pairs
+
+# III. Web Service Interaction
+    # Correct implementation of requests library for HTTP POST requests
+    # Proper formatting of dictionary data for sending via POST request
+    # Successful connection to the web service endpoint
+
+# IV. Error Handling
+    # Appropriate error handling during file processing
+    # Proper error handling for web service upload attempts
+
+# V. Code Organization and Readability
+    # Clear and logical structure of the script
+    # Proper use of functions for different tasks
+    # Well-commented code explaining key steps
+
+# VI. Testing and Verification
+    # Thorough testing of the script with sample data
+    # Verification of successful uploads through web interface or logs
+
+# VII. Additional Considerations
+    # Handling of potential edge cases (e.g., empty files, malformed data)
+    # Efficiency in processing large numbers of files
+
+# =====================
