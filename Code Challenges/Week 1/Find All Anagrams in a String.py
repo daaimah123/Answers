@@ -22,9 +22,10 @@
     # Keep track of matching windows
 
 # Counting Characters Approach
+from typing import List 
 from collections import Counter
 
-def find_anagrams(s: str, p: str) -> list[int]:
+def find_anagrams(s: str, p: str) -> List[int]:
     if len(p) > len(s):
         return []
     
@@ -39,9 +40,10 @@ def find_anagrams(s: str, p: str) -> list[int]:
     return result
 
 # Sliding Window Approach
+from typing import List 
 from collections import Counter
 
-def find_anagrams(s: str, p: str) -> list[int]:
+def find_anagrams(s: str, p: str) -> List[int]:
     if len(p) > len(s):
         return []
     
