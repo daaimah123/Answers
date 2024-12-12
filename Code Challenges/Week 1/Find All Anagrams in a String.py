@@ -39,6 +39,20 @@ def find_anagrams(s: str, p: str) -> List[int]:
     
     return result
 
+# OR
+def find_anagram(p: str, s: str) -> list[int]: 
+    if len(p) < len(s): 
+        return [] 
+        
+    anagram_sorted = sorted(s) 
+    result = []  
+    
+    for i in range(len(p) - len(s) + 1): 
+        if sorted(p[i:i + len(s)]) == anagram_sorted: 
+            result.append(i) 
+        
+    return result
+
 
 # Test cases
 print(find_anagrams("cbaebabacd", "abc"))  # Output: [0, 6]
