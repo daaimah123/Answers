@@ -6,10 +6,6 @@ def findTargetIndex(inputStr, targetStr):
     # Use str.find() method to get the index of the first occurrence
     index = inputStr.find(targetStr)
     
-    # If the substring is not found, find() returns -1
-    if index == -1:
-        return -1
-    
     return index
   
 # Test cases
