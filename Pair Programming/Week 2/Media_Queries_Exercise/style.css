@@ -1,0 +1,79 @@
+/*Box model*/
+html {
+  box-sizing: border-box;
+}
+/*Target selector*/
+/*target all elements and include the pseudo-elements with ::before and ::after*/
+*,
+::before,
+::after {
+  box-sizing: inherit; /*will tell the targeted elements to use the same value as the parent element.*/
+}
+
+/*ID selector*/
+#piano {
+  position: relative;
+  background-color: #40c3dd;
+  width: 992px;
+  height: 290px;
+  margin: 80px auto;
+  padding: 90px 20px 0 20px;
+  border-radius: 10px;
+}
+/*Keys*/
+.keys {
+  overflow: hidden;
+  background-color: #040404;
+  width: 949px;
+  height: 180px;
+  padding-left: 2px;
+}
+.key {
+  background-color: #ffffff;
+  position: relative;
+  width: 41px;
+  height: 175px;
+  margin: 2px;
+  float: left;
+  border-radius: 0 0 3px 3px;
+}
+
+/*Black Keys*/
+/*target the elem with the class key black--key, and select the pseudo-element after these elem*/
+.key.black--key::after {
+  background-color: #1d1e22;
+  content: ""; /*to set or override the content of the element*/
+  position: absolute;
+  left: -18px;
+  width: 32px;
+  height: 100px;
+  border-radius: 0 0 3px 3px;
+}
+/*Logo*/
+.logo {
+  width: 200px;
+  position: absolute;
+  top: 23px;
+}
+/*apply CSS based on the viewport width using the max-width and min-width properties*/
+
+@media (max-width: 768px) {
+  #piano {
+    width: 358px;
+  }
+  .keys {
+    width: 318px;
+  }
+  .logo {
+    width: 150px;
+  }
+}
+/*to apply if the browser window is wider than x but smaller than y*/
+@media (min-width: 769px) and (max-width: 1199px) {
+  #piano {
+    width: 675px;
+  }
+  .keys {
+    width: 633px;
+  }
+}

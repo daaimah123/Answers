@@ -1,0 +1,19 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#element{
+  border: 1px solid #333;
+  padding: 50px;
+  cursor: pointer;
+}
+
+.hover-effect{
+  background-color: lavender;
+  border: 1px solid Fuchsia;
+}
+
+/* .my-class {
+  color: blue;
+} */
