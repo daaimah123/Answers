@@ -4,6 +4,8 @@ import { render, screen } from '@testing-library/react';
 import ItemList from './ItemList';
 
 describe('ItemList', () => {
+
+  // TEST 1
   it('renders a list of items', () => {
     // sample data for testing
     const items = ['Apple', 'Banana', 'Cherry'];
@@ -15,6 +17,7 @@ describe('ItemList', () => {
     });
   });
 
+  // TEST 2
   it('does not display duplicate items', () => {
     const items = ['Apple', 'Banana', 'Cherry', 'Apple'];
     render(<ItemList items={items} />);
@@ -25,6 +28,7 @@ describe('ItemList', () => {
     });
   });
 
+  // TEST 3
   test('removes duplicate items', () => {
     const itemsWithDuplicates = ['Item 1', 'Item 2', 'Item 1'];
     setup({ items: itemsWithDuplicates });
@@ -36,6 +40,7 @@ describe('ItemList', () => {
     expect(screen.getAllByRole('listitem')).toHaveLength(uniqueItems.length);
   });
 
+  // TEST 4
     test('renders empty state when no items provided', () => {
     setup({ items: [] });
     expect(screen.getByText(/no items/i)).toBeInTheDocument();
